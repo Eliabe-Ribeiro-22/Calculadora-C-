@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculadora</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+	
+</head>
+
+<body>
+	<h1>Calculadora em JavaScript</h1>
+		<div class="historico">Historico</div>
+		<div class="visor">Visor</div>
+
+		<div>
+			<div class="teclado" onclick="teclado('1')">1</div>
+			<div class="teclado" onclick="teclado('2')">2</div>
+			<div class="teclado" onclick="teclado('3')">3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+			<div>0</div>
+			<div>,</div>
+		</div>
+	
+
+		<button>clear</button>
+		<button>backspace</button>
+		<button>x!</button>
+		<button>sqrt</button>
+		<button>%</button>
+		<button>-</button>
+		<button>+</button>
+		<button>x</button>
+		<button>=</button>
+	</main>
+
+	<!-- <script type="js" src="assets/js/calculadora.js"/> -->
+	<script type="text/javascript">
+	alert("ok")
+	let visor = document.querySelector('.visor')
+
+	function teclado(botao){
+		let qual_botao = botao
+	
+	// 	switch(botao){
+	// 		case "1":
+	// 			visor.innerHTML = "1"
+	// break
+
+	// default:
+	// alert("Ocorreu um erro")
+	//}
+
+
+	switch(botao){
+			case "1":
+				visor.innerHTML = "1"
+				break;
+
+			case "2":
+				visor.innerHTML = "2"
+				break;
+
+			case "3":
+				visor.innerHTML = "3"
+				break
+			case "4":
+				visor.innerHTML = "4"
+				break
+
+			case "5":
+				visor.innerHTML = "5"
+				break
+
+			case "6":
+				visor.innerHTML = "6"
+				break
+
+			case "7":
+				visor.innerHTML = "7"
+				break
+
+			case "8":
+				visor.innerHTML = "8"
+				break
+
+			case "9":
+				visor.innerHTML = "9"
+				break
+
+			default:
+				alert("Ocorreu um erro")
+}
+}</script>
+</body>
+</html>

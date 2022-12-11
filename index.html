@@ -14,18 +14,18 @@
 		<div class="historico">Historico</div>
 		<div class="visor">Visor</div>
 
-		<div>
-			<div class="teclado" onclick="teclado('1')">1</div>
+		<div class="grid">
+			<div class="teclado"onclick="teclado('1')">1</div>
 			<div class="teclado" onclick="teclado('2')">2</div>
 			<div class="teclado" onclick="teclado('3')">3</div>
-			<div>4</div>
-			<div>5</div>
-			<div>6</div>
-			<div>7</div>
-			<div>8</div>
-			<div>9</div>
-			<div>0</div>
-			<div>,</div>
+			<div class="teclado" onclick="teclado('4')">4</div>
+			<div class="teclado" onclick="teclado('5')">5</div>
+			<div class="teclado" onclick="teclado('6')">6</div>
+			<div class="teclado" onclick="teclado('7')">7</div>
+			<div class="teclado" onclick="teclado('8')">8</div>
+			<div class="teclado" onclick="teclado('9')">9</div>
+			<div class="teclado" onclick="teclado('0')">0</div>
+			<div class="teclado" onclick="teclado(',')">,</div>
 		</div>
 	
 
@@ -42,23 +42,12 @@
 
 	<!-- <script type="js" src="assets/js/calculadora.js"/> -->
 	<script type="text/javascript">
-	alert("ok")
 	let visor = document.querySelector('.visor')
 
 	function teclado(botao){
 		let qual_botao = botao
-	
-	// 	switch(botao){
-	// 		case "1":
-	// 			visor.innerHTML = "1"
-	// break
-
-	// default:
-	// alert("Ocorreu um erro")
-	//}
-
-
-	switch(botao){
+		
+		switch(botao){
 			case "1":
 				visor.innerHTML = "1"
 				break;
@@ -93,7 +82,12 @@
 			case "9":
 				visor.innerHTML = "9"
 				break
-
+			case "0":
+				visor.innerHTML = "0"
+				break
+			case ",":
+				visor.innerHTML = ","
+				break
 			default:
 				alert("Ocorreu um erro")
 }

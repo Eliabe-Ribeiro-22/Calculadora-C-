@@ -1,7 +1,16 @@
-*{
-	box-sizing: border-box;
+* {
+    box-sizing: border-box;
 }
 
-.teclado{
-	cursor: pointer;
+.grid {
+    display: grid;
+    grid-template-columns: 4rem 4rem 4rem 4rem;
+    grid-template-rows: 4rem 4rem 4rem 4rem;
+    background: red;
+}
+
+.teclado {
+    background: aqua;
+    border: 1px solid black;
+    cursor: pointer;
 }

@@ -121,37 +121,37 @@ function backspace() {
 // Operações de cálculo
 function calcular(operacao) {
   alert("entrou no calcular");
-  let valorLeft = parseFloat(document.getElementById("txtValorA").value);
+  let valorLeft = parseFloat(document.getElementById("txtValorLeft").value);
   var status = true;
-  let valor = parseFloat(document.getElementById("txtValorB").value);
+  let valorRight = parseFloat(document.getElementById("txtValorRight").value);
 
   let resultado;
 
   switch (operacao) {
     case "+":
-      resultado = valorA + valorB;
+      resultado = valorLeft + valorRight;
       break;
 
     case "-":
-      resultado = valorA - valorB;
+      resultado = valorLeft - valorRight;
       break;
 
     case "/":
-      resultado = valorA / valorB;
+      resultado = valorLeft / valorRight;
       break;
 
     case "*":
-      resultado = valorA * valorB;
+      resultado = valorLeft * valorRight;
       break;
     case "quadrado":
-      resultado = Math.sqrt(valorA);
+      resultado = Math.sqrt(valorLeft);
       break;
     case "potencia":
-      resultado = Math.pow(valorA, 2);
+      resultado = Math.pow(valorLeft, 2);
       break;
     case "fatorial":
       var fatorial = 1;
-      for (i = valorA; i > 1; i--) {
+      for (i = valorLeft; i > 1; i--) {
         fatorial *= i;
       }
       resultado = fatorial;
@@ -170,8 +170,8 @@ function calcular(operacao) {
     alert(resultado_formatado);
 
     document.getElementById("visor").value = resultado_formatado;
-    document.querySelector("#txtValorA").value = "";
-    document.querySelector("#txtValorB").value = "";
+    document.querySelector("#txtvalorLeft").value = "";
+    document.querySelector("#txtvalorRight").value = "";
   } else {
     alert("Ocorreu um erro ao calcular!");
   }

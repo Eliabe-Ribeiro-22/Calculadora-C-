@@ -1,7 +1,7 @@
 // Functions
 
 // Eventos de Teclado
-function tecladoA(botao) {
+function tecladoLeft(botao) {
   let valorLeft = document.querySelector("#txtValorLeft");
   switch (botao) {
     case "1":

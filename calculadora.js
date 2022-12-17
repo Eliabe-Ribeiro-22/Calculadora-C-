@@ -2,41 +2,92 @@
 
 // Eventos de Teclado
 function tecladoA(botao) {
-  let valorA = document.querySelector("#txtValorA");
-  let visor = valorA;
+  let valorLeft = document.querySelector("#txtValorLeft");
   switch (botao) {
     case "1":
-      visor.value = "1";
+      valorLeft.value = "1";
       break;
     case "2":
-      visor.value = "2";
+      valorLeft.value = "2";
       break;
     case "3":
-      visor.value = "3";
+      valorLeft.value = "3";
       break;
     case "4":
-      visor.value = "4";
+      valorLeft.value = "4";
       break;
     case "5":
-      visor.value = "5";
+      valorLeft.value = "5";
       break;
     case "6":
-      visor.value = "6";
+      valorLeft.value = "6";
       break;
     case "7":
-      visor.value = "7";
+      valorLeft.value = "7";
       break;
     case "8":
-      visor.value = "8";
+      valorLeft.value = "8";
       break;
     case "9":
-      visor.value = "9";
+      valorLeft.value = "9";
       break;
     case "0":
-      visor.value = "0";
+      valorLeft.value = "0";
       break;
     case ",":
-      visor.value = ",";
+      if (!valorLeft.value == "") {
+        valorLeft.value += ",";
+      } else {
+        valorLeft.value = "0,";
+      }
+      break;
+    default:
+      alert("Ocorreu um erro");
+  }
+  document.querySelector("#visor").value = "";
+}
+
+// teclado para o valor do campo à direita
+
+function tecladoRight(botao) {
+  let valorRight = document.querySelector("#txtValorRight");
+  switch (botao) {
+    case "1":
+      valorRight.value = "1";
+      break;
+    case "2":
+      valorRight.value = "2";
+      break;
+    case "3":
+      valorRight.value = "3";
+      break;
+    case "4":
+      valorRight.value = "4";
+      break;
+    case "5":
+      valorRight.value = "5";
+      break;
+    case "6":
+      valorRight.value = "6";
+      break;
+    case "7":
+      valorRight.value = "7";
+      break;
+    case "8":
+      valorRight.value = "8";
+      break;
+    case "9":
+      valorRight.value = "9";
+      break;
+    case "0":
+      valorRight.value = "0";
+      break;
+    case ",":
+      if (!valorRight.value == "") {
+        valorRight.value += ",";
+      } else {
+        valorRight.value = "0,";
+      }
       break;
     default:
       alert("Ocorreu um erro");
@@ -46,8 +97,8 @@ function tecladoA(botao) {
 
 // Limpar e BackSpace
 function limpar() {
-  document.querySelector("#txtValorA").value = "";
-  document.querySelector("#txtValorB").value = "";
+  document.querySelector("#txtValorLeft").value = "";
+  document.querySelector("#txtValorRight").value = "";
   document.querySelector("#visor").value = "";
 }
 

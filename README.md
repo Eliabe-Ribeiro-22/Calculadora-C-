@@ -1,2 +1,3 @@
-# Calculadora.js
-Este repositório é destinada a conter o código-fonte de uma calculadora desenvolvida com HTML, CSS e JavaScript
+# Calculadora JS
+
+Calculadora desenvolvida para revisar meus conhecimentos em HTML, CSS e JS. Ela realiza várias operações, com fatorial, raiz quadrada, potência, multiplicação, divisão, soma e subtração com qualquer número racional.

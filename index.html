@@ -11,10 +11,12 @@
 <body>
 	<h1>Calculadora em JavaScript</h1>
 		<div class="historico">Historico</div>
-		
-		<input type="number" step="any" id="visor">
+		<input type="number" step="any" id="txtValorA">
+		<input type="number" step="any" id="txtValorB">
+		Resultado
+		<input type="text" id="visor" readonly disabled="true">
 		<div class="grid">
-			<div class="teclado"onclick="teclado('1')">1</div>
+			<div class="teclado" onclick="teclado('1')">1</div>
 			<div class="teclado" onclick="teclado('2')">2</div>
 			<div class="teclado" onclick="teclado('3')">3</div>
 			<div class="teclado" onclick="teclado('4')">4</div>
@@ -30,12 +32,13 @@
 
 		<button onclick="limpar()">clear</button>
 		<button onclick="backspace()">backspace</button>
-		<button>x!</button>
-		<button>sqrt</button>
-		<button>%</button>
-		<button>-</button>
-		<button>+</button>
-		<button>x</button>
+		<button onclick='calcular("fatorial")'>x!</button>
+		<button onclick="calcular('quadrado')">square</button>
+		<button onclick="calcular('potencia')">x<sup>2</sup></button>
+		<button onclick="calcular('/')">/</button>
+		<button onclick="calcular('-')">-</button>
+		<button onclick="calcular('+')">+</button>
+		<button onclick="calcular('x')">x</button>
 		<button>=</button>
 	</main>
 </body>

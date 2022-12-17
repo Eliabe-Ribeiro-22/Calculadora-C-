@@ -103,26 +103,24 @@ function limpar() {
 }
 
 function backspace() {
-  var visor = document.querySelector("#visor");
-  if (!(visor.value == "")) {
-    if (visor.value.lenght > 1) {
-      var array = [visor.value];
-      console.log(array);
-      array.splice(0, 1);
-      document.querySelector("#visor").value = array;
-      console.log(array);
-    } else {
-      visor.value = "";
-    }
-  }
+  // txtValorLeft
+  var valorLeft = document.querySelector("#txtValorLeft");
+  // valor do input
+  let numero = valorLeft.value;
+  // Quantos caracteres
+  let tamanho = numero.length;
+  // Apagar o último caracter
+  valorLeft.value = valor.substring(0, tamanho - 1);
+
+  //valorLeft.value = "";
 }
 
 // Operações de cálculo
 function calcular(operacao) {
   alert("entrou no calcular");
-  let valorA = parseFloat(document.getElementById("txtValorA").value);
+  let valorLeft = parseFloat(document.getElementById("txtValorA").value);
   var status = true;
-  let valorB = parseFloat(document.getElementById("txtValorB").value);
+  let valor = parseFloat(document.getElementById("txtValorB").value);
 
   let resultado;
 

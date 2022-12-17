@@ -103,16 +103,19 @@ function limpar() {
 }
 
 function backspace() {
+  
   // txtValorLeft
-  var valorLeft = document.querySelector("#txtValorLeft");
-  // valor do input
-  let numero = valorLeft.value;
-  // Quantos caracteres
-  let tamanho = numero.length;
-  // Apagar o último caracter
-  valorLeft.value = valor.substring(0, tamanho - 1);
+  var campoLeft = document.querySelector("#txtValorLeft");
+  let numeroLeft = campoLeft.value;
+  let tamanhoLeft = numeroLeft.length;
+  campoLeft.value = numeroLeft.substring(0, tamanhoLeft - 1);
 
-  //valorLeft.value = "";
+  
+  // txtValoRight
+  var campoRight = document.querySelector("#txtValorRight");
+  let numeroRight = campoRight.value;
+  let tamanhoRight = numeroRight.length;
+  campoRight.value = numeroRight.substring(0, tamanhoRight - 1);
 }
 
 // Operações de cálculo

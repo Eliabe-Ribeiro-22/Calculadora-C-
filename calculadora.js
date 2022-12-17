@@ -26,9 +26,11 @@ fs.readFile(__dirname + "/index.html")
   });
 
 // Functions
+
 // Eventos de Teclado
-function teclado(botao) {
-  var visor = document.querySelector("#visor");
+function tecladoA(botao) {
+  let valorA = document.querySelector("#txtValorA");
+  let visor = valorA;
   switch (botao) {
     case "1":
       visor.value = "1";
@@ -66,6 +68,7 @@ function teclado(botao) {
     default:
       alert("Ocorreu um erro");
   }
+  document.querySelector("#visor").value = "";
 }
 
 // Limpar e BackSpace
@@ -102,22 +105,18 @@ function calcular(operacao) {
   switch (operacao) {
     case "+":
       resultado = valorA + valorB;
-      alert(resultado);
       break;
 
     case "-":
       resultado = valorA - valorB;
-      alert(resultado);
       break;
 
     case "/":
       resultado = valorA / valorB;
-      alert(resultado);
       break;
 
     case "*":
       resultado = valorA * valorB;
-      alert(resultado);
       break;
     case "quadrado":
       resultado = Math.sqrt(valorA);
@@ -146,6 +145,8 @@ function calcular(operacao) {
     alert(resultado_formatado);
 
     document.getElementById("visor").value = resultado_formatado;
+    document.querySelector("#txtValorA").value = "";
+    document.querySelector("#txtValorB").value = "";
   } else {
     alert("Ocorreu um erro ao calcular!");
   }

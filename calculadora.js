@@ -1,4 +1,4 @@
-// Functions
+// Funções da Calculadora
 
 // Eventos de Teclado
 //  Teclado numérico para o valor do campo à direita

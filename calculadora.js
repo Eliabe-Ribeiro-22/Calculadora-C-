@@ -41,18 +41,22 @@ function tecladoLeft(botao) {
       }
       break;
     case "6":
-      valorLeft.value = "6";
+      if (!valorLeft.value == "") {
+        valorLeft.value += "6";
+      } else {
+        valorLeft.value = "6";
+      }
       break;
     case "7":
       if (!valorLeft.value == "") {
-        valorLeft.value += "9";
+        valorLeft.value += "7";
       } else {
         valorLeft.value = "7";
       }
       break;
     case "8":
       if (!valorLeft.value == "") {
-        valorLeft.value += "9";
+        valorLeft.value += "8";
       } else {
         valorLeft.value = "8";
       }
@@ -89,16 +93,32 @@ function tecladoRight(botao) {
   let valorRight = document.querySelector("#txtValorRight");
   switch (botao) {
     case "1":
-      valorRight.value = "1";
+      if (!valorRight.value == "") {
+        valorRight.value += "1";
+      } else {
+        valorRight.value = "1";
+      }
       break;
     case "2":
-      valorRight.value = "2";
+      if (!valorRight.value == "") {
+        valorRight.value += "2";
+      } else {
+        valorRight.value = "2";
+      }
       break;
     case "3":
-      valorRight.value = "3";
+      if (!valorRight.value == "") {
+        valorRight.value += "3";
+      } else {
+        valorRight.value = "3";
+      }
       break;
     case "4":
-      valorRight.value = "4";
+      if (!valorRight.value == "") {
+        valorRight.value += "4";
+      } else {
+        valorRight.value = "4";
+      }
       break;
     case "5":
       if (!valorRight.value == "") {
@@ -130,7 +150,7 @@ function tecladoRight(botao) {
       break;
     case "9":
       if (!valorRight.value == "") {
-        valorRight.value += ",";
+        valorRight.value += "9";
       } else {
         valorRight.value = "9";
       }

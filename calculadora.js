@@ -1,38 +1,75 @@
 // Functions
 
 // Eventos de Teclado
+//  Teclado numérico para o valor do campo à direita
 function tecladoLeft(botao) {
   let valorLeft = document.querySelector("#txtValorLeft");
   switch (botao) {
     case "1":
-      valorLeft.value = "1";
+      if (!valorLeft.value == "") {
+        valorLeft.value += "1";
+      } else {
+        valorLeft.value = "1";
+      }
       break;
     case "2":
-      valorLeft.value = "2";
+      if (!valorLeft.value == "") {
+        valorLeft.value += "2";
+      } else {
+        valorLeft.value = "2";
+      }
       break;
     case "3":
-      valorLeft.value = "3";
+      if (!valorLeft.value == "") {
+        valorLeft.value += "3";
+      } else {
+        valorLeft.value = "3";
+      }
       break;
     case "4":
-      valorLeft.value = "4";
+      if (!valorLeft.value == "") {
+        valorLeft.value += "4";
+      } else {
+        valorLeft.value = "4";
+      }
       break;
     case "5":
-      valorLeft.value = "5";
+      if (!valorLeft.value == "") {
+        valorLeft.value += "5";
+      } else {
+        valorLeft.value = "5";
+      }
       break;
     case "6":
       valorLeft.value = "6";
       break;
     case "7":
-      valorLeft.value = "7";
+      if (!valorLeft.value == "") {
+        valorLeft.value += "9";
+      } else {
+        valorLeft.value = "7";
+      }
       break;
     case "8":
-      valorLeft.value = "8";
+      if (!valorLeft.value == "") {
+        valorLeft.value += "9";
+      } else {
+        valorLeft.value = "8";
+      }
       break;
     case "9":
-      valorLeft.value = "9";
+      if (!valorLeft.value == "") {
+        valorLeft.value += "9";
+      } else {
+        valorLeft.value = "9";
+      }
       break;
     case "0":
-      valorLeft.value = "0";
+      if (!valorLeft.value == "") {
+        valorLeft.value += "0";
+      } else {
+        valorLeft.value = "0";
+      }
       break;
     case ",":
       if (!valorLeft.value == "") {
@@ -47,8 +84,7 @@ function tecladoLeft(botao) {
   document.querySelector("#visor").value = "";
 }
 
-// teclado para o valor do campo à direita
-
+//  Teclado numérico para o valor do campo à direita
 function tecladoRight(botao) {
   let valorRight = document.querySelector("#txtValorRight");
   switch (botao) {
@@ -65,22 +101,46 @@ function tecladoRight(botao) {
       valorRight.value = "4";
       break;
     case "5":
-      valorRight.value = "5";
+      if (!valorRight.value == "") {
+        valorRight.value += "5";
+      } else {
+        valorRight.value = "5";
+      }
       break;
     case "6":
-      valorRight.value = "6";
+      if (!valorRight.value == "") {
+        valorRight.value += "6";
+      } else {
+        valorRight.value = "6";
+      }
       break;
     case "7":
-      valorRight.value = "7";
+      if (!valorRight.value == "") {
+        valorRight.value += "7";
+      } else {
+        valorRight.value = "7";
+      }
       break;
     case "8":
-      valorRight.value = "8";
+      if (!valorRight.value == "") {
+        valorRight.value += "8";
+      } else {
+        valorRight.value = "8";
+      }
       break;
     case "9":
-      valorRight.value = "9";
+      if (!valorRight.value == "") {
+        valorRight.value += ",";
+      } else {
+        valorRight.value = "9";
+      }
       break;
     case "0":
-      valorRight.value = "0";
+      if (!valorRight.value == "") {
+        valorRight.value += "0";
+      } else {
+        valorRight.value = "0";
+      }
       break;
     case ",":
       if (!valorRight.value == "") {
@@ -103,14 +163,12 @@ function limpar() {
 }
 
 function backspace() {
-  
   // txtValorLeft
   var campoLeft = document.querySelector("#txtValorLeft");
   let numeroLeft = campoLeft.value;
   let tamanhoLeft = numeroLeft.length;
   campoLeft.value = numeroLeft.substring(0, tamanhoLeft - 1);
 
-  
   // txtValoRight
   var campoRight = document.querySelector("#txtValorRight");
   let numeroRight = campoRight.value;

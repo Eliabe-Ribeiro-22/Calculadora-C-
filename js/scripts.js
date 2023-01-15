@@ -22,7 +22,7 @@ class Calculator{
 	// Process all calculator operations
 	processOperation(operation){
 		// Check if current is empty
-		if(this.currentOperationText.innerText === ""){
+		if(this.currentOperationText.innerText === "" && operation !== "C"){
 			// Check if previous is not empty, we can change operation
 			if(this.previousOperationText.innerText !== ""){
 				this.changeOperation(operation)
@@ -60,6 +60,15 @@ class Calculator{
 				operationValue = previous * current
 				this.updateScreen(operationValue, operation, current, previous)
 				break;
+			case "DEL":
+				this.processDelOperator()
+				break;
+			case "CE":
+				this.processClearCurrentOperation()
+			break;
+			case "C":
+				this.processClearOperation()
+			break;
 			default:
 				return;
 		}
@@ -89,12 +98,28 @@ class Calculator{
 
 	// Change math operation
 	changeOperation(operation){
-		const mathOperations = ["*", "/", "+", "-"]
+		const mathOperations = ["X", "%", "+", "-"]
 		if(!mathOperations.includes(operation)){
 			return;
 		}
 		this.previousOperationText.innerText =  this.previousOperationText.innerText.slice(0, -1) + operation
+	 }
 
+	 // Delete the last digit 
+	 processDelOperator(){
+		this.currentOperationText.innerText = 
+		this.currentOperationText.innerText.slice(0, -1)
+	}
+
+	// Clear current operation
+	processClearCurrentOperation(){
+		this.currentOperationText.innerText = "";
+	}
+
+	// Clear all operations
+	processClearOperation(){
+		this.currentOperationText.innerText = "";
+		this.previousOperationText.innerText = "";	
 	}
 }
 

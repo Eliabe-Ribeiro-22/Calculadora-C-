@@ -85,15 +85,19 @@ class Calculator{
 			case "DEL":
 				this.processDelOperator()
 				break;
+
 			case "CE":
 				this.processClearCurrentOperation()
 			break;
+
 			case "C":
 				this.processClearOperation()
 			break;
+			
 			case "=":
-			this.processEqualOperator();
+				this.processEqualOperator();
 			break;
+
 			default:
 				return;
 		}

@@ -1,108 +1,41 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Calculadora</title>
-    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
-  </head>
-
-  <body>
-    <h1>Calculadora em JavaScript</h1>
-    <!-- <div class="historico">Historico</div>
-		<input type="number" step="any" id="txtValorLeft" onclick="clicouA()">
-		<input type="number" step="any" id="txtValorRight" onclick="clicouB()">
-		Resultado
-		<input type="text" id="visor" readonly disabled="true">
-		<div class="grid">
-			<div class="teclado" onclick="tecladoLeft('1')">1</div>
-			<div class="teclado" onclick="tecladoLeft('2')">2</div>
-			<div class="teclado" onclick="tecladoLeft('3')">3</div>
-			<div class="teclado" onclick="tecladoLeft('4')">4</div>
-			<div class="teclado" onclick="tecladoLeft('5')">5</div>
-			<div class="teclado" onclick="tecladoLeft('6')">6</div>
-			<div class="teclado" onclick="tecladoLeft('7')">7</div>
-			<div class="teclado" onclick="tecladoLeft('8')">8</div>
-			<div class="teclado" onclick="tecladoLeft('9')">9</div>
-			<div class="teclado" onclick="tecladoLeft('0')">0</div>
-			<div class="teclado" onclick="tecladoLeft(',')">,</div>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Calc</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript" src="js/scripts.js" defer></script>
+</head>
+<body>
+	<div id="calc">
+		<h3>Calculadora</h3>
+		<div id="operations">
+			<div id="previous-operation"></div>
+			<div id="current-operation"></div>
 		</div>
 
-		<div class="grid">
-			<div class="teclado" onclick="tecladoRight('1')">1</div>
-			<div class="teclado" onclick="tecladoRight('2')">2</div>
-			<div class="teclado" onclick="tecladoRight('3')">3</div>
-			<div class="teclado" onclick="tecladoRight('4')">4</div>
-			<div class="teclado" onclick="tecladoRight('5')">5</div>
-			<div class="teclado" onclick="tecladoRight('6')">6</div>
-			<div class="teclado" onclick="tecladoRight('7')">7</div>
-			<div class="teclado" onclick="tecladoRight('8')">8</div>
-			<div class="teclado" onclick="tecladoRight('9')">9</div>
-			<div class="teclado" onclick="tecladoRight('0')">0</div>
-			<div class="teclado" onclick="tecladoRight(',')">,</div>
+		<div id="buttons-container">
+			<button>CE</button>
+			<button>C</button>
+			<button>CEL</button>
+			<button>/</button>
+			<button class="number">7</button>
+			<button class="number">8</button>
+			<button class="number">9</button>
+			<button>*</button>
+			<button class="number">4</button>
+			<button class="number">5</button>
+			<button class="number">6</button>
+			<button>-</button>
+			<button class="number">1</button>
+			<button class="number">2</button>
+			<button class="number">3</button>
+			<button>+</button>
+			<button class="number">0</button>
+			<button class="number">.</button>
+			<button id="equal-btn">=</button>
 		</div>
-	
-
-		<button onclick="limpar()">clear</button>
-		<button onclick="backspace()">backspace</button>
-		<button onclick="calcular('fatorial')">x!</button>
-		<button onclick="calcular('quadrado')">square</button>
-		<button onclick="calcular('potencia')">x<sup>2</sup></button>
-		<button onclick="calcular('/')">/</button>
-		<button onclick="calcular('-')">-</button>
-		<button onclick="calcular('+')">+</button>
-		<button onclick="calcular('*')">x</button>
-	</main> -->
-
-    <main class="main">
-      <section class="calculadora">
-        <table>
-          <tbody>
-            <tr>
-              <td colspan="4">
-                <input
-                  id="tela"
-                  maxlength="30"
-                  readonly="readonly"
-                  type="text"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input id="apagarAnterior" type="button" value="&#8678;" />
-              </td>
-              <td><input id="limparTela" type="button" value="C" /></td>
-            </tr>
-            <tr>
-              <td><input id="num7" type="button" value="7" /></td>
-              <td><input id="num8" type="button" value="8" /></td>
-              <td><input id="num9" type="button" value="9" /></td>
-              <td><input id="divisao" type="button" value="/" /></td>
-            </tr>
-            <tr>
-              <td><input id="num4" type="button" value="4" /></td>
-              <td><input id="num5" type="button" value="5" /></td>
-              <td><input id="num6" type="button" value="6" /></td>
-              <td><input id="multiplicacao" type="button" value="*" /></td>
-            </tr>
-            <tr>
-              <td><input id="num1" type="button" value="1" /></td>
-              <td><input id="num2" type="button" value="2" /></td>
-              <td><input id="num3" type="button" value="3" /></td>
-              <td><input id="subtracao" type="button" value="-" /></td>
-            </tr>
-            <tr>
-              <td><input id="num0" type="button" value="0" /></td>
-              <td><input id="ponto" type="button" value="." /></td>
-              <td><input id="resultado" type="button" value="=" /></td>
-              <td><input id="soma" type="button" value="+" /></td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </main>
-
-    <script type="text/javascript" src="./calculadora.js"></script>
-  </body>
+	</div>
+	</body>
 </html>

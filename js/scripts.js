@@ -20,7 +20,7 @@ class Calculator{
 	}
 
 	// Process all calculator operations
-	processOperation(operation){
+	processOperation(operation, showValueCurrent = false){
 		// Check if current is empty
 		if(this.currentOperationText.innerText === "" && operation !== "C"){
 			// Check if previous is not empty, we can change operation
@@ -39,8 +39,14 @@ class Calculator{
 
 		switch(operation){
 			case "+":
+				if(showValueCurrent == false){
 				operationValue = previous + current
-				this.updateScreen(operationValue, operation, current, previous)
+				this.updateScreen(operationValue, operation, current, previous, false)
+				}
+				else{
+				operationValue = previous + current
+				this.updateScreen(operationValue, operation, current, previous, true)
+				}
 				break;
 			case "-":
 				operationValue = previous - current
@@ -77,7 +83,8 @@ class Calculator{
 		operationValue = null, 
 		operation = null, 
 		current = null, 
-		previous = null
+		previous = null, 
+		showValueCurrent = false
 		){
 		if(operation === null){
 			this.currentOperationText.innerText += this.currentOperation
@@ -87,9 +94,17 @@ class Calculator{
 				operationValue = current
 			}
 
-			// Add current value to previous
-			this.previousOperationText.innerText = `${operationValue} ${operation}`
-			this.currentOperationText.innerText = "" 
+			if(!showValueCurrent){
+				// Add current value to previous
+				this.previousOperationText.innerText = `${operationValue} ${operation}`
+				this.currentOperationText.innerText = "" 
+			}
+			else{
+				// Add current value to current
+				this.previousOperationText.innerText = "" 
+				this.currentOperationText.innerText = `${operationValue}`
+			}
+			
 		}
 	}
 
@@ -121,7 +136,9 @@ class Calculator{
 
 	// Processo an operation
 	processEqualOperator(){
-		
+		const operation = previousOperationText.innerText.split(" ")[1]	
+
+		this.processOperation(operation, true)
 	}
 }
 

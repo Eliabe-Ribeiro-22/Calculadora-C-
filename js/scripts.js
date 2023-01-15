@@ -39,27 +39,49 @@ class Calculator{
 
 		switch(operation){
 			case "+":
-				if(showValueCurrent == false){
 				operationValue = previous + current
-				this.updateScreen(operationValue, operation, current, previous, false)
+		
+				if(!showValueCurrent){
+					this.updateScreen(operationValue, operation, current, previous)
 				}
-				else{
-				operationValue = previous + current
-				this.updateScreen(operationValue, operation, current, previous, true)
+				else{				
+					this.updateScreen(operationValue, operation, current, previous, true)
 				}
 				break;
+
 			case "-":
 				operationValue = previous - current
-				this.updateScreen(operationValue, operation, current, previous)
+		
+				if(!showValueCurrent){
+					this.updateScreen(operationValue, operation, current, previous)
+				}
+				else{				
+					this.updateScreen(operationValue, operation, current, previous, true)
+				}
 				break;
+
 			case "%":
 				operationValue = previous / current
-				this.updateScreen(operationValue, operation, current, previous)
+				
+				if(!showValueCurrent){
+					this.updateScreen(operationValue, operation, current, previous)
+				}
+				else{				
+					this.updateScreen(operationValue, operation, current, previous, true)
+				}
 				break;
+			
 			case "X":
 				operationValue = previous * current
-				this.updateScreen(operationValue, operation, current, previous)
+				
+				if(!showValueCurrent){
+					this.updateScreen(operationValue, operation, current, previous)
+				}
+				else{				
+					this.updateScreen(operationValue, operation, current, previous, true)
+				}
 				break;
+			
 			case "DEL":
 				this.processDelOperator()
 				break;

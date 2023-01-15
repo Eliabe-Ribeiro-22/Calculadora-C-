@@ -28,12 +28,6 @@ class Calculator{
 				this.changeOperation(operation)
 			}
 			return;
-			/* 
-			the line above is equals to code: 
-			else{
-			 return;
-			}
-			*/
 		}
 
 		// Get current and previous value
@@ -68,6 +62,9 @@ class Calculator{
 			break;
 			case "C":
 				this.processClearOperation()
+			break;
+			case "=":
+			this.processEqualOperator();
 			break;
 			default:
 				return;
@@ -120,6 +117,11 @@ class Calculator{
 	processClearOperation(){
 		this.currentOperationText.innerText = "";
 		this.previousOperationText.innerText = "";	
+	}
+
+	// Processo an operation
+	processEqualOperator(){
+		
 	}
 }
 
